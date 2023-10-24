@@ -1,0 +1,71 @@
+Question :-
+Explain the difference between justify-items and justify-self using code examples.
+
+Answer:-
+The main differnce between justify-items and justify-self id -
+
+justify-items is used on a grid container and is used to determine how grid items are spread out along a row by setting the default justify-self property for all child boxes.
+
+justify-self is used to set how an individual grid item positions itself along the row/inline axis.
+
+Let us understand them by taking an example, below code, for example having 6 grid items arranged in a 3x2
+grid.
+
+<!-- for justify-items -->
+
+HTML:-
+ <div class="container">
+        <div class="child1">child 1</div>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3</div>
+        <div class="child4">child 4</div>
+        <div class="child5">child 5</div>
+        <div class="child6">child 6</div>
+        </div>
+
+CSS:-
+    container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: 1px solid black;
+        width: 600px;
+
+    }
+    .container > div {
+        padding: 5px;
+        background-color: rgb(196, 246, 255);
+        border: 1px solid black;
+    }
+
+OUTPUT:- Screenshot (144).png
+
+
+<!-- for justify-self -->
+
+HTML:-
+ <div class="container">
+        <div class="child1">child 1</div>
+        <div class="child2">child 2</div>
+        <div class="child3">child 3</div>
+        <div class="child4">child 4</div>
+        <div class="child5">child 5</div>
+        <div class="child6">child 6</div>
+        </div>
+
+CSS:-
+    container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: 1px solid black;
+        width: 600px;
+        justify-items: center;
+
+    }
+    .container > div {
+        padding: 5px;
+        background-color: rgb(196, 246, 255);
+        border: 1px solid black;
+    }
+
+OUTPUT:- Screenshot (145).png
+

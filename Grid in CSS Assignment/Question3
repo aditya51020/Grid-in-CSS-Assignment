@@ -1,0 +1,32 @@
+Question :-
+Explain the use of grid-auto-row and grid-auto-column using code examples.
+
+Answer:-
+
+The **grid-auto-rows CSS** property is part of the CSS Grid Layout specification, specifying the size of the grid rows that were created without having an explicit size. In other words, this property sets the size of implicit rows and any other rows that have not been explicitly sized in the grid-template-rows property.
+
+it specify multiple column sizes for grid tracks using the **grid-auto-columns** property. In this case, the multiple track size works as a pattern and it gets repeated if necessary. Here, we move the last child of our grid out of the explicit columns and our grid creates implicit columns to hold that item as a result.
+
+Example :-
+
+index.html
+<div class="container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+</div>
+
+index.css
+
+.container {
+    display: grid;
+    grid-template-areas: "X X";
+    grid-template-rows: 50px;
+    grid-auto-rows: 200px;
+}
+.container > div {
+    border: 1px solid black;
+    background-color: bisque;
+    padding: 5px;
+}
